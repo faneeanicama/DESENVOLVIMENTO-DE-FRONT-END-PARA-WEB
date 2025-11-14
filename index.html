@@ -7,6 +7,7 @@
     <title>ONG Mãos Solidárias</title>
   </head>
   <body class="page-grid">
+    <a class="skip-link" href="#main">Pular para o conteúdo</a>
     <header class="site-header container">
       <div class="brand">
         <a href="index.html">
@@ -22,24 +23,16 @@
         <ul>
           <li><a href="index.html">Início</a></li>
           <li><a href="projetos.html">Projetos e Doações</a></li>
-          <li class="has-submenu">
-            <a href="#" aria-haspopup="true" aria-expanded="false"
-              >Serviços ▾</a
-            >
-            <ul class="submenu" aria-label="submenu">
-              <li><a href="projetos.html#cozinha">Cozinha Solidária</a></li>
-              <li><a href="projetos.html#saber">Saber para Crescer</a></li>
-            </ul>
-          </li>
+
           <li><a href="Cadastro.html">Seja um Voluntário</a></li>
         </ul>
       </nav>
     </header>
 
-    <main class="container">
-      <section aria-labelledby="home-hero">
+    <main id="main" class="container" role="main">
+      <section class="hero fade-in" aria-labelledby="home-hero">
         <h2 id="home-hero">Bem-vindo à Mãos Solidárias</h2>
-        <p>
+        <p class="lead">
           Somos uma organização sem fins lucrativos dedicada a promover o
           bem-estar e a dignidade de pessoas em situação de vulnerabilidade.
         </p>
@@ -75,20 +68,20 @@
 
       <section>
         <h2>Números que Falam</h2>
-        <div class="stats">
-          <article>
+        <div class="stats row">
+          <article class="col-3">
             <h3>15.000+</h3>
             <p>Pessoas impactadas</p>
           </article>
-          <article>
+          <article class="col-3">
             <h3>150+</h3>
             <p>Voluntários ativos</p>
           </article>
-          <article>
+          <article class="col-3">
             <h3>8</h3>
             <p>Programas sociais</p>
           </article>
-          <article>
+          <article class="col-3">
             <h3>4</h3>
             <p>Anos de atuação</p>
           </article>
