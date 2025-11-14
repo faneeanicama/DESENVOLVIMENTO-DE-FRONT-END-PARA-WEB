@@ -1,0 +1,36 @@
+{
+  "name": "ong-maos-solidarias",
+  "version": "1.0.0",
+  "description": "Site profissional para ONG Mãos Solidárias — HTML5, CSS3, JS vanilla com acessibilidade WCAG 2.1 AA",
+  "main": "index.html",
+  "scripts": {
+    "build": "npm run build:css && npm run build:js && npm run build:html && npm run build:images",
+    "build:css": "node scripts/minify-css.js",
+    "build:js": "node scripts/minify-js.js",
+    "build:html": "node scripts/minify-html.js",
+    "build:images": "node scripts/compress-images.js",
+    "dev": "python -m http.server 8000",
+    "test:accessibility": "echo 'Use Lighthouse, Axe, or WAVE for accessibility testing'",
+    "test:contrast": "echo 'Use https://webaim.org/resources/contrastchecker/'"
+  },
+  "keywords": [
+    "ong",
+    "voluntariado",
+    "acessibilidade",
+    "wcag",
+    "html5",
+    "css3"
+  ],
+  "author": "Desenvolvedor",
+  "license": "MIT",
+  "devDependencies": {
+    "html-minifier": "^4.0.0",
+    "imagemin": "^8.0.1",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "terser": "^5.16.8"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
