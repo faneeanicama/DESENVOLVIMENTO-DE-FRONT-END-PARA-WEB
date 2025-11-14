@@ -1059,4 +1059,196 @@ body {
   color: var(--color-neutral-900);
 }
 
+/* ============================================================
+   DARK MODE (prefers-color-scheme: dark) — WCAG 2.1 AA
+   ============================================================ */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Invert colors for dark background */
+    --color-primary-500: #8fa3b0;
+    --color-primary-700: #c5d1d8;
+    --color-secondary-500: #a0a0a0;
+    --color-secondary-300: #707070;
+    --color-accent-500: #7faacc;
+    --color-accent-300: #a5c5e0;
+    --color-neutral-900: #f0f0f0;
+    --color-neutral-700: #d0d0d0;
+    --color-neutral-500: #a0a0a0;
+    --color-white: #1a1a1a;
+    --color-danger: #ff6b6b;
+    --color-success: #51cf66;
+
+    /* Dark backgrounds */
+    --shadow-soft: 0 6px 18px rgba(0, 0, 0, 0.3);
+    --shadow-strong: 0 12px 40px rgba(0, 0, 0, 0.4);
+    --glass-bg: rgba(30, 30, 30, 0.72);
+  }
+
+  html,
+  body {
+    background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+    color: var(--color-neutral-700);
+  }
+
+  .site-header {
+    background: linear-gradient(
+      180deg,
+      rgba(30, 30, 30, 0.8),
+      rgba(20, 20, 20, 0.6)
+    );
+    border-bottom-color: rgba(100, 100, 100, 0.1);
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #2a2a2a, #1f1f1f);
+    color: var(--color-neutral-900);
+    border-color: rgba(200, 200, 200, 0.1);
+  }
+
+  .card {
+    background: #2a2a2a;
+    border-color: rgba(200, 200, 200, 0.1);
+  }
+
+  .card:hover {
+    background: #323232;
+  }
+
+  .stats article {
+    background: #2a2a2a;
+    border-left-color: #555555;
+  }
+
+  blockquote {
+    background: #2a2a2a;
+    border-left-color: #555555;
+    color: var(--color-neutral-700);
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #404040, #303030);
+    color: var(--color-neutral-900);
+    border-color: #555555;
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #4a4a4a, #3a3a3a);
+  }
+
+  .nav a:hover,
+  .nav a:focus {
+    background: #404040;
+  }
+
+  .nav a.active {
+    background: #404040;
+    color: var(--color-neutral-900);
+    border-color: #555555;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="tel"],
+  textarea,
+  select {
+    background: #2a2a2a;
+    border-color: #555555;
+    color: var(--color-neutral-900);
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #7faacc;
+    background: #303030;
+  }
+
+  fieldset {
+    background: #1a1a1a;
+    border-color: #555555;
+  }
+
+  .alert-info {
+    background: rgba(127, 170, 204, 0.1);
+    color: #7faacc;
+    border-left-color: #7faacc;
+  }
+
+  .alert-success {
+    background: rgba(81, 207, 102, 0.1);
+    color: #51cf66;
+    border-left-color: #51cf66;
+  }
+
+  .alert-danger {
+    background: rgba(255, 107, 107, 0.1);
+    color: #ff6b6b;
+    border-left-color: #ff6b6b;
+  }
+
+  footer {
+    background: linear-gradient(
+      180deg,
+      rgba(30, 30, 30, 0.08),
+      rgba(20, 20, 20, 0.04)
+    );
+    border-top-color: rgba(200, 200, 200, 0.1);
+  }
+}
+
+/* ============================================================
+   HIGH CONTRAST MODE (prefers-contrast: more)
+   ============================================================ */
+
+@media (prefers-contrast: more) {
+  :root {
+    /* Maximum contrast */
+    --color-primary-700: #000000;
+    --color-neutral-900: #000000;
+    --color-white: #ffffff;
+  }
+
+  .card {
+    border-width: 2px;
+    border-color: #000000;
+  }
+
+  .btn-primary {
+    border-width: 2px;
+    border-color: #000000;
+  }
+
+  .card,
+  button,
+  input,
+  select,
+  textarea {
+    border-width: 2px;
+  }
+
+  .skip-link {
+    border-width: 2px;
+    border-color: #000000;
+  }
+
+  fieldset {
+    border-width: 2px;
+    border-color: #000000;
+  }
+}
+
+/* ============================================================
+   REDUCE MOTION (prefers-reduced-motion: reduce)
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 /* End of stylesheet */
