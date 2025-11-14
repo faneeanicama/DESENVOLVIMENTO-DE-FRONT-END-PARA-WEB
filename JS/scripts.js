@@ -1,5 +1,3 @@
-
-
 /* SPA Router, Template engine, Form validation and localStorage persistence */
 (function () {
   const ROUTES = {
@@ -198,10 +196,10 @@
         }
       });
     })();
+  }
 
   // run at start
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener("DOMContentLoaded", () => {
     initDynamic();
   });
-
 })();
