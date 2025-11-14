@@ -1,58 +1,118 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <link rel="stylesheet" href="CSS/style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Seja um Voluntário</title>
   </head>
-  <body>
-    <h1>Seja um Voluntário</h1>
-    <header>
-      <img src="Imagens/unnamed.png" alt="Logotipo da ONG Mãos Solidárias" />
+  <body class="page-grid">
+    <header class="site-header container">
+      <div class="brand">
+        <a href="index.html"
+          ><img
+            src="Imagens/unnamed.png"
+            alt="Logotipo da ONG Mãos Solidárias"
+            class="logo"
+        /></a>
+        <h1 class="site-title">Seja um Voluntário</h1>
+      </div>
 
-      <nav>
+      <input id="nav-toggle-c" class="nav-toggle" type="checkbox" />
+      <label for="nav-toggle-c" class="nav-toggle-label" aria-hidden>☰</label>
+
+      <nav class="nav" aria-label="Main navigation">
         <ul>
           <li><a href="index.html">Início</a></li>
           <li><a href="projetos.html">Projetos e Doações</a></li>
-          <li><a href="cadastro.html">Seja um Voluntário</a></li>
+          <li class="has-submenu">
+            <a href="#" aria-haspopup="true" aria-expanded="false">Serviços ▾</a>
+            <ul class="submenu" aria-label="submenu">
+              <li><a href="projetos.html#cozinha">Cozinha Solidária</a></li>
+              <li><a href="projetos.html#saber">Saber para Crescer</a></li>
+            </ul>
+          </li>
+          <li><a href="Cadastro.html">Seja um Voluntário</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <br />
-      <h3>Junte-se a nós!</h3>
-      <p>
-        Estamos sempre em busca de pessoas dedicadas e apaixonadas por fazer a
-        diferença. Se você deseja se tornar um voluntário em nossa ONG, por
-        favor, preencha o formulário abaixo com suas informações de contato e
-        áreas de interesse.
-      </p>
+    <main class="container">
+      <section>
+        <h2>Junte-se a Nós!</h2>
+        <p>
+          Estamos sempre em busca de pessoas dedicadas e apaixonadas por fazer a diferença na vida 
+          de outras pessoas. Se você deseja se tornar um voluntário em nossa ONG, você está no lugar certo!
+        </p>
+        <p>
+          Como voluntário, você terá a oportunidade de escolher em qual projeto deseja atuar, 
+          receberá treinamento adequado e fará parte de uma comunidade de pessoas inspiradoras 
+          que estão mudando o mundo, uma vida por vez.
+        </p>
+      </section>
 
       <img
         src="Imagens/cadastramento.png"
         alt="Pessoas sorrindo ao se inscreverem para voluntariado."
+        style="width: 100%; display: block;"
       />
-      <br />
-      <br />
 
-      <form action="#" method="post">
+      <section>
+        <h2>Por Que Ser Voluntário?</h2>
+        <ul>
+          <li><strong>Fazer Diferença Real:</strong> Seu trabalho impacta diretamente vidas de pessoas em situação vulnerável</li>
+          <li><strong>Desenvolvimento Pessoal:</strong> Ganhe experiência profissional, expanda sua rede e aprenda novas habilidades</li>
+          <li><strong>Comunidade:</strong> Faça parte de um grupo de pessoas com valores similares e missão compartilhada</li>
+          <li><strong>Flexibilidade:</strong> Escolha seus horários e projetos de interesse</li>
+          <li><strong>Reconhecimento:</strong> Ganhe certificados e referências para seu desenvolvimento profissional</li>
+          <li><strong>Capacitação Gratuita:</strong> Treinamentos e workshops oferecidos pela ONG</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Projetos Disponíveis para Voluntários</h2>
+        <p>Você pode atuar em um ou mais projetos:</p>
+        <ul>
+          <li>
+            <strong>🍽️ Cozinha Solidária:</strong> Preparação e distribuição de refeições 
+            (segunda a sexta, turnos manhã/tarde)
+          </li>
+          <li>
+            <strong>📚 Saber para Crescer:</strong> Aulas de reforço escolar, oficinas de arte 
+            (terça e quinta à noite, sábados)
+          </li>
+          <li>
+            <strong>🏥 Saúde em Comunidade:</strong> Campanhas de saúde, atendimento assistencial 
+            (sábados e domingos)
+          </li>
+          <li>
+            <strong>👶 Primeiros Passos:</strong> Acompanhamento de crianças e orientação a mães 
+            (segunda a quinta, matutino)
+          </li>
+          <li>
+            <strong>💻 Gestão Administrativa:</strong> Apoio com tecnologia, redes sociais, comunicação
+          </li>
+        </ul>
+      </section>
+
+      <form class="volunteer-form" action="#" method="post">
         <fieldset>
-          <legend>Seus Dados Pessoais</legend>
+          <legend>📋 Seus Dados Pessoais</legend>
 
           <div>
-            <label for="nome">Nome Completo:</label>
+            <label for="nome">Nome Completo: *</label>
             <input
               type="text"
               id="nome"
               name="nome_completo"
               required
               minlength="3"
+              placeholder="Digite seu nome completo"
             />
           </div>
 
           <div>
-            <label for="email">E-mail:</label>
+            <label for="email">E-mail: *</label>
             <input
               type="email"
               id="email"
@@ -63,7 +123,7 @@
           </div>
 
           <div>
-            <label for="nascimento">Data de Nascimento:</label>
+            <label for="nascimento">Data de Nascimento: *</label>
             <input
               type="date"
               id="nascimento"
@@ -73,7 +133,7 @@
           </div>
 
           <div>
-            <label for="cpf">CPF:</label>
+            <label for="cpf">CPF: *</label>
             <input
               type="text"
               id="cpf"
@@ -81,11 +141,12 @@
               required
               pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
               title="Digite um CPF no formato: 123.456.789-00"
+              placeholder="123.456.789-00"
             />
           </div>
 
           <div>
-            <label for="telefone">Telefone / Celular:</label>
+            <label for="telefone">Telefone / Celular: *</label>
             <input
               type="tel"
               id="telefone"
@@ -93,15 +154,48 @@
               required
               pattern="\(\d{2}\) \d{5}-\d{4}"
               title="Digite um telefone no formato: (99) 99999-9999"
+              placeholder="(83) 99999-9999"
+            />
+          </div>
+
+          <div>
+            <label for="whatsapp">WhatsApp (para notificações):</label>
+            <input
+              type="tel"
+              id="whatsapp"
+              name="whatsapp"
+              pattern="\(\d{2}\) \d{5}-\d{4}"
+              placeholder="(83) 99999-9999"
+            />
+          </div>
+
+          <div>
+            <label for="genero">Gênero:</label>
+            <select id="genero" name="genero">
+              <option value="">Selecione...</option>
+              <option value="masculino">Masculino</option>
+              <option value="feminino">Feminino</option>
+              <option value="outro">Outro</option>
+              <option value="prefiro-nao">Prefiro não informar</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="profissao">Profissão / Área de Formação:</label>
+            <input 
+              type="text" 
+              id="profissao" 
+              name="profissao"
+              placeholder="Ex: Professor, Enfermeiro, Engenheiro, etc."
             />
           </div>
         </fieldset>
 
         <fieldset>
-          <legend>Seu Endereço</legend>
+          <legend>📍 Seu Endereço</legend>
 
           <div>
-            <label for="cep">CEP:</label>
+            <label for="cep">CEP: *</label>
             <input
               type="text"
               id="cep"
@@ -109,38 +203,211 @@
               required
               pattern="\d{5}-\d{3}"
               title="Digite um CEP no formato: 12345-678"
+              placeholder="12345-678"
             />
           </div>
 
           <div>
-            <label for="endereco">Endereço (Rua, Nº, Bairro):</label>
-            <input type="text" id="endereco" name="endereco" required />
+            <label for="endereco">Endereço (Rua, Nº, Complemento): *</label>
+            <input 
+              type="text" 
+              id="endereco" 
+              name="endereco" 
+              required
+              placeholder="Rua das Flores, 123, Apto 456"
+            />
           </div>
 
           <div>
-            <label for="cidade">Cidade:</label>
-            <input type="text" id="cidade" name="cidade" required />
+            <label for="bairro">Bairro: *</label>
+            <input 
+              type="text" 
+              id="bairro" 
+              name="bairro" 
+              required
+              placeholder="Bairro Unipê"
+            />
           </div>
 
           <div>
-            <label for="estado">Estado:</label>
+            <label for="cidade">Cidade: *</label>
+            <input type="text" id="cidade" name="cidade" required placeholder="João Pessoa" />
+          </div>
+
+          <div>
+            <label for="estado">Estado: *</label>
             <input
               type="text"
               id="estado"
               name="estado"
               required
               maxlength="2"
-              placeholder="Ex: PB"
+              placeholder="PB"
             />
           </div>
         </fieldset>
 
-        <br />
-        <br />
-        <button type="submit">Quero ser voluntário!</button>
-        <button type="reset">Limpar formulário</button>
+        <fieldset>
+          <legend>🎯 Interesse em Voluntariado</legend>
+
+          <div>
+            <label for="projetos">Quais projetos você tem interesse? (Selecione um ou mais)</label>
+            <div style="margin-top: 12px;">
+              <label style="display: block; margin-bottom: 8px;">
+                <input type="checkbox" name="projeto" value="cozinha-solidaria" /> 
+                Cozinha Solidária
+              </label>
+              <label style="display: block; margin-bottom: 8px;">
+                <input type="checkbox" name="projeto" value="saber-crescer" /> 
+                Saber para Crescer
+              </label>
+              <label style="display: block; margin-bottom: 8px;">
+                <input type="checkbox" name="projeto" value="saude-comunidade" /> 
+                Saúde em Comunidade
+              </label>
+              <label style="display: block; margin-bottom: 8px;">
+                <input type="checkbox" name="projeto" value="primeiros-passos" /> 
+                Primeiros Passos
+              </label>
+              <label style="display: block; margin-bottom: 8px;">
+                <input type="checkbox" name="projeto" value="administrativo" /> 
+                Gestão Administrativa
+              </label>
+              <label style="display: block;">
+                <input type="checkbox" name="projeto" value="aberto" /> 
+                Aberto a sugestões
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label for="disponibilidade">Qual sua disponibilidade semanal? *</label>
+            <select id="disponibilidade" name="disponibilidade" required>
+              <option value="">Selecione...</option>
+              <option value="menos-2h">Menos de 2 horas</option>
+              <option value="2-4h">2 a 4 horas</option>
+              <option value="4-8h">4 a 8 horas</option>
+              <option value="mais-8h">Mais de 8 horas</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="dias">Melhor período para voluntariar:</label>
+            <div style="margin-top: 12px;">
+              <label style="display: block; margin-bottom: 8px;">
+                <input type="checkbox" name="periodo" value="manha" /> 
+                Manhã (7h - 12h)
+              </label>
+              <label style="display: block; margin-bottom: 8px;">
+                <input type="checkbox" name="periodo" value="tarde" /> 
+                Tarde (12h - 18h)
+              </label>
+              <label style="display: block;">
+                <input type="checkbox" name="periodo" value="noite" /> 
+                Noite (18h - 21h)
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label for="experiencia">Você tem experiência anterior em trabalho voluntário?</label>
+            <select id="experiencia" name="experiencia">
+              <option value="">Selecione...</option>
+              <option value="sim-sim">Sim, em outra ONG</option>
+              <option value="sim-informal">Sim, informalmente</option>
+              <option value="nao">Não, mas gostaria de começar</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="habilidades">Habilidades especiais ou certificações que possa compartilhar:</label>
+            <textarea 
+              id="habilidades" 
+              name="habilidades" 
+              rows="4"
+              placeholder="Ex: Primeiro-socorrista, Professor de Inglês, Experiência com crianças, etc."
+            ></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>ℹ️ Informações Adicionais</legend>
+
+          <div>
+            <label for="motivacao">Por que você quer ser voluntário? *</label>
+            <textarea 
+              id="motivacao" 
+              name="motivacao" 
+              rows="4"
+              required
+              placeholder="Conte-nos o que te motiva a fazer parte da Mãos Solidárias..."
+            ></textarea>
+          </div>
+
+          <div>
+            <label for="como-conheceu">Como você conheceu a Mãos Solidárias?</label>
+            <select id="como-conheceu" name="como-conheceu">
+              <option value="">Selecione...</option>
+              <option value="amigo">Indicação de amigo/família</option>
+              <option value="internet">Redes sociais / Internet</option>
+              <option value="evento">Participei de um evento</option>
+              <option value="midia">Jornal / TV / Mídia</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+
+          <div>
+            <label style="display: flex; align-items: flex-start; gap: 8px; margin-top: 16px;">
+              <input 
+                type="checkbox" 
+                id="termos" 
+                name="termos" 
+                required
+                style="margin-top: 4px;"
+              /> 
+              <span>
+                Concordo com a política de privacidade e termos de uso da ONG. 
+                Autorizo o uso de meus dados para contato e comunicações sobre voluntariado. *
+              </span>
+            </label>
+          </div>
+
+          <div>
+            <label style="display: flex; align-items: flex-start; gap: 8px;">
+              <input 
+                type="checkbox" 
+                id="newsletter" 
+                name="newsletter"
+                style="margin-top: 4px;"
+              /> 
+              <span>Gostaria de receber newsletters com notícias e eventos da ONG</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <div style="display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap;">
+          <button class="btn btn-primary" type="submit">
+            ✓ Quero ser voluntário!
+          </button>
+          <button class="btn" type="reset">🔄 Limpar formulário</button>
+        </div>
+
+        <p style="font-size: 0.9rem; color: #7f8c8d; margin-top: 16px;">
+          * Campos obrigatórios. Após enviar, você receberá um email de confirmação com 
+          próximas etapas. Tempo médio de resposta: 3 dias úteis.
+        </p>
       </form>
-    </main>
+
+      <section style="background-color: #f0f1f3; padding: 24px; border-left: 4px solid #2c5aa0; margin-top: 40px;">
+        <h3>✅ Próximas Etapas</h3>
+        <ol>
+          <li><strong>Cadastro:</strong> Preencha este formulário completamente</li>
+          <li><strong>Confirmação:</strong> Você receberá um email com informações de contato</li>
+          <li><strong>Entrevista:</strong> Conversa informal com nosso coordenador (presencial ou virtual)</li>
+          <li><strong>Treinamento:</strong> Capacitação no projeto escolhido</li>
+          <li><strong>Atuação:</strong> Comece a fazer diferença na vida de pessoas!</li>
+        </ol>
+      </section>
 
     <footer>
       <section>
@@ -154,5 +421,7 @@
 
       <p>&copy; 2025 Mãos Solidárias. Todos os direitos reservados.</p>
     </footer>
+    <p>&copy; 2025 Mãos Solidárias. Todos os direitos reservados.</p>
+    <script src="JS/scripts.js"></script>
   </body>
 </html>

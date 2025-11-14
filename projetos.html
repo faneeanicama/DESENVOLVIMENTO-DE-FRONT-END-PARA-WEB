@@ -1,109 +1,303 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <link rel="stylesheet" href="CSS/style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projetos e Doações</title>
   </head>
-  <body>
-    <h1>Projetos e Doações</h1>
-    <img src="Imagens/unnamed.png" alt="Mãos Solidárias" />
-    <header>
-      <nav>
+  <body class="page-grid">
+    <header class="site-header container">
+      <div class="brand">
+        <a href="index.html"
+          ><img src="Imagens/unnamed.png" alt="Mãos Solidárias" class="logo"
+        /></a>
+        <h1 class="site-title">Projetos e Doações</h1>
+      </div>
+
+      <input id="nav-toggle-p" class="nav-toggle" type="checkbox" />
+      <label for="nav-toggle-p" class="nav-toggle-label" aria-hidden>☰</label>
+
+      <nav class="nav" aria-label="Main navigation">
         <ul>
           <li><a href="index.html">Início</a></li>
           <li><a href="projetos.html">Projetos e Doações</a></li>
-          <li><a href="cadastro.html">Seja um Voluntário</a></li>
+          <li class="has-submenu">
+            <a href="#" aria-haspopup="true" aria-expanded="false"
+              >Serviços ▾</a
+            >
+            <ul class="submenu" aria-label="submenu">
+              <li><a href="#cozinha">Cozinha Solidária</a></li>
+              <li><a href="#saber">Saber para Crescer</a></li>
+            </ul>
+          </li>
+          <li><a href="Cadastro.html">Seja um Voluntário</a></li>
         </ul>
       </nav>
     </header>
-    <h2>Conheça nosso trabalho</h2>
-    <p>
-      Aqui você encontra informações sobre nossos projetos atuais e como você
-      pode contribuir com doações para apoiar nossa causa. Nossa missão é levar
-      esperança, dignidade e oportunidades para comunidades em vulnerabilidade
-      social.
-    </p>
-    <section>
-      <h2>Projetos Sociais em Andamento</h2>
-      <p>
-        Todo nosso esforço é direcionado para ações práticas que mudam vidas.
-        Conheça nossas principais frentes de atuação:
-      </p>
-
-      <article>
-        <h3>Projeto "Cozinha Solidária"</h3>
-        <img
-          src="Imagens/marmitasd.png"
-          alt="Voluntários preparando marmitas para doação."
-        />
+    <main class="container">
+      <section>
+        <h2>Conheça Nosso Trabalho</h2>
         <p>
-          Distribuímos refeições nutritivas diariamente para pessoas em situação
-          de rua. Nosso objetivo é garantir a segurança alimentar e levar um
-          pouco de dignidade a quem mais precisa.
+          Aqui você encontra informações detalhadas sobre nossos projetos atuais
+          e como você pode contribuir com doações para apoiar nossa causa. Nossa
+          missão é levar esperança, dignidade e oportunidades para comunidades
+          em vulnerabilidade social. Cada projeto foi desenvolvido escutando a
+          comunidade e respondendo às suas necessidades reais.
         </p>
-      </article>
+      </section>
 
-      <article>
-        <h3>Projeto "Saber para Crescer"</h3>
-        <img
-          src="Imagens/children.png"
-          alt="Criança em uma sala de aula de reforço escolar."
-        />
+      <section>
+        <h2>Projetos Sociais em Andamento</h2>
         <p>
-          Oferecemos aulas de reforço escolar e atividades culturais para
-          crianças e adolescentes de comunidades carentes. Acreditamos na
-          educação como principal ferramenta de transformação.
+          Todo nosso esforço é direcionado para ações práticas que mudam vidas.
+          Conheça nossas principais frentes de atuação e o impacto que cada uma
+          gera:
         </p>
-      </article>
-    </section>
 
-    <section>
-      <h2>Como ser um Voluntário?</h2>
-      <p>
-        O seu tempo é um dos bens mais preciosos que podemos receber. Nossos
-        voluntários são o coração da "Mãos Solidárias". Se você deseja ajudar em
-        nossos projetos, preencha seu cadastro!
-      </p>
-      <a href="cadastro.html">Quero ser voluntário!</a>
-      <br />
-      <br />
-      <img
-        src="Imagens/cadastramento.png"
-        alt="Criança em uma sala de aula de reforço escolar."
-      />
-    </section>
+        <div class="cards">
+          <article class="card">
+            <h3>🍽️ Projeto "Cozinha Solidária"</h3>
+            <img
+              src="Imagens/marmitasd.png"
+              alt="Voluntários preparando marmitas para doação."
+            />
+            <p>
+              Distribuímos refeições nutritivas diariamente para pessoas em
+              situação de rua e famílias em extrema pobreza. Nosso objetivo é
+              garantir a segurança alimentar e levar um pouco de dignidade a
+              quem mais precisa.
+            </p>
+            <p>
+              <strong>Impacto:</strong> 500+ refeições distribuídas mensalmente
+              | <strong>Frequência:</strong> Segunda a sexta |
+              <strong>Voluntários:</strong> 25 pessoas engajadas
+            </p>
+            <div class="meta">
+              <span class="badge">Alimentação</span>
+              <a class="btn btn-primary" href="#">Saiba mais</a>
+            </div>
+          </article>
 
-    <section>
-      <h2>Como Doar?</h2>
-      <p>
-        Para manter nossos projetos funcionando, dependemos 100% de doações. Sua
-        contribuição financeira é vital. Veja como ajudar:
-      </p>
-      <ul>
-        <li>
-          <strong>Doação via PIX:</strong> Chave: 00.000.000/0001-99 (CNPJ)
-        </li>
-        <li>
-          <strong>Transferência Bancária:</strong>
-          <ul>
-            <li>Banco Solidários (000)</li>
-            <li>Agência: 1234</li>
-            <li>Conta Corrente: 56789-0</li>
-          </ul>
-        </li>
-      </ul>
-    </section>
+          <article class="card">
+            <h3>📚 Projeto "Saber para Crescer"</h3>
+            <img
+              src="Imagens/children.png"
+              alt="Criança em uma sala de aula de reforço escolar."
+            />
+            <p>
+              Oferecemos aulas de reforço escolar, oficinas culturais e
+              atividades de lazer para crianças e adolescentes de comunidades
+              carentes. Acreditamos na educação como principal ferramenta de
+              transformação social e mobilidade.
+            </p>
+            <p>
+              <strong>Impacto:</strong> 200+ crianças atendidas |
+              <strong>Disciplinas:</strong> Português, Matemática, Inglês e
+              Artes | <strong>Professores:</strong> 15 voluntários certificados
+            </p>
+            <div class="meta">
+              <span class="badge">Educação</span>
+              <a class="btn btn-primary" href="#">Saiba mais</a>
+            </div>
+          </article>
 
-    <footer>
+          <article class="card">
+            <h3>🏥 Projeto "Saúde em Comunidade"</h3>
+            <img
+              src="Imagens/saude.png"
+              alt="Profissional de saúde atendendo paciente na comunidade."
+            />
+            <p>
+              Realizamos campanhas gratuitas de saúde com médicos voluntários,
+              oferecendo consultas, orientações preventivas e distribuição de
+              medicamentos básicos. Focamos em educação em saúde e prevenção de
+              doenças.
+            </p>
+            <p>
+              <strong>Impacto:</strong> 300+ pessoas atendidas por mês |
+              <strong>Especialidades:</strong> Clínica Geral, Odontologia,
+              Psicologia | <strong>Frequência:</strong> Sábados e domingos
+            </p>
+            <div class="meta">
+              <span class="badge">Saúde</span>
+              <a class="btn btn-primary" href="#">Saiba mais</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>👶 Projeto "Primeiros Passos"</h3>
+            <img
+              src="Imagens/primeiros.png"
+              alt="atividade de estimulação infantil."
+            />
+            <p>
+              Acompanhamento integral de bebês e crianças pequenas de 0 a 3
+              anos, com foco em desenvolvimento saudável, nutrição adequada e
+              estimulação cognitiva. Também oferecemos orientação às mães e
+              cuidadores.
+            </p>
+            <p>
+              <strong>Impacto:</strong> 80+ crianças e 60+ mães acompanhadas |
+              <strong>Atividades:</strong> Estimulação, nutricional, psicológica
+              | <strong>Equipe:</strong> Pediatra, nutricionista e psicóloga
+            </p>
+            <div class="meta">
+              <span class="badge">Desenvolvimento Infantil</span>
+              <a class="btn btn-primary" href="#">Saiba mais</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Testemunhos de Impacto</h2>
+        <p>
+          As histórias reais de pessoas transformadas por nossos projetos são o
+          maior combustível para continuarmos nosso trabalho:
+        </p>
+        <article>
+          <blockquote>
+            <p>
+              "A refeição oferecida pela Cozinha Solidária me deu forças para
+              continuar lutando. Agora tenho esperança de um futuro melhor."
+            </p>
+            <footer>— Carlos, beneficiário desde 2022</footer>
+          </blockquote>
+        </article>
+        <article>
+          <blockquote>
+            <p>
+              "Graças ao Saber para Crescer, minha filha conseguiu passar de ano
+              e agora quer ser professora. Ela estuda com afinco todos os dias!"
+            </p>
+            <footer>— Maria Silva, mãe de Ana, 12 anos</footer>
+          </blockquote>
+        </article>
+      </section>
+
+      <section>
+        <h2>Como ser um Voluntário?</h2>
+        <p>
+          O seu tempo é um dos bens mais preciosos que podemos receber. Nossos
+          voluntários são o coração da "Mãos Solidárias". Se você deseja ajudar
+          em nossos projetos, venha conosco! Oferecemos:
+        </p>
+        <ul>
+          <li>
+            <strong>Formação:</strong> Treinamentos específicos para cada
+            projeto
+          </li>
+          <li>
+            <strong>Suporte:</strong> Coordenadores dedicados para orientação
+            contínua
+          </li>
+          <li>
+            <strong>Comunidade:</strong> Rede de voluntários engajados e
+            inspiradores
+          </li>
+          <li>
+            <strong>Impacto Visível:</strong> Acompanhamento dos resultados
+            gerados
+          </li>
+          <li>
+            <strong>Flexibilidade:</strong> Escolha dia, hora e projeto de seu
+            interesse
+          </li>
+        </ul>
+        <p style="margin-top: 20px">
+          <strong>Vagas abertas para:</strong> Professores, médicos,
+          nutricionistas, psicólogos, cozinheiros, educadores sociais e pessoas
+          com disposição para aprender!
+        </p>
+        <a
+          href="Cadastro.html"
+          class="btn btn-primary"
+          style="display: inline-block; margin-top: 12px"
+          >Quero ser voluntário!</a
+        >
+        <br />
+        <br />
+        <img
+          src="Imagens/cadastramento.png"
+          alt="Voluntários da ONG sorrindo e trabalhando juntos."
+        />
+      </section>
+
+      <section>
+        <h2>Como Doar?</h2>
+        <p>
+          Para manter nossos projetos funcionando e expandindo o alcance de
+          nossa atuação, dependemos 100% de doações de pessoas como você. Sua
+          contribuição, por menor que pareça, é vital e faz a diferença concreta
+          na vida de quem mais precisa.
+        </p>
+        <p>
+          <strong>Onde sua doação vai parar:</strong>
+        </p>
+        <ul>
+          <li>70% - Projetos sociais e beneficiários diretos</li>
+          <li>20% - Gestão administrativa e funcionários</li>
+          <li>10% - Capacitação de voluntários e pesquisa social</li>
+        </ul>
+
+        <h3>Formas de Doação</h3>
+        <p><strong>1. Doação via PIX (Instantânea):</strong></p>
+        <ul>
+          <li>Chave CPF: 123.456.789-00</li>
+          <li>Chave CNPJ: 00.000.000/0001-99</li>
+          <li>Email: doacao@ongms.com.br</li>
+        </ul>
+
+        <p><strong>2. Transferência Bancária:</strong></p>
+        <ul>
+          <li>Banco do Brasil (001)</li>
+          <li>Agência: 1234-5</li>
+          <li>Conta Corrente: 56789-0</li>
+          <li>Titular: ONG Mãos Solidárias</li>
+        </ul>
+
+        <p><strong>3. Doação Recorrente (Mensalista):</strong></p>
+        <ul>
+          <li>Doe R$ 30, 50, 100 ou outro valor mensal</li>
+          <li>Ganhe certificado de impacto mensal</li>
+          <li>Maior sustentabilidade para nossos projetos</li>
+        </ul>
+
+        <p><strong>4. Doação de Produtos/Serviços:</strong></p>
+        <ul>
+          <li>Alimentos, roupas, medicamentos, material escolar</li>
+          <li>Serviços profissionais (consultoria, design, etc.)</li>
+          <li>Entrem em contato: doacao@ongms.com.br</li>
+        </ul>
+
+        <div
+          style="
+            background-color: #f0f1f3;
+            padding: 20px;
+            border-left: 4px solid #2c5aa0;
+            margin-top: 24px;
+          "
+        >
+          <p>
+            <strong>💡 Saiba mais:</strong> Todas as doações geram recibo fiscal
+            e são dedutíveis no IR (consulte seu contador). Somos OSCIP e você
+            pode acompanhar o impacto de sua doação através de relatórios
+            trimestrais enviados para seu email.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container">
       <section>
         <h3>Contato</h3>
         <p>Endereço: Rua Fictícia, 123 - Bairro Unipê</p>
         <p>Telefone: (83) 0800 721 5844</p>
         <p>Email: contato@ongms.com.br</p>
       </section>
+      <p>&copy; 2025 Mãos Solidárias. Todos os direitos reservados.</p>
     </footer>
-
-    <p>&copy; 2025 Mãos Solidárias. Todos os direitos reservados.</p>
+    <script src="JS/scripts.js"></script>
   </body>
 </html>

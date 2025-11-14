@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="CSS/style.css" />
     <title>ONG Mãos Solidárias</title>
   </head>
-  <body>
-    <header>
-      <h1>ONG MÃOS SOLIDÁRIAS</h1>
-      <p>
-        <i
-          >"Sejam Bem Vindos! Esse é o nosso espaço de compartilhar União,
-          Cuidado e Transformação."</i
-        >
-        <img src="Imagens/unnamed.webp" alt="Mãos Solidárias" />
-      </p>
+  <body class="page-grid">
+    <header class="site-header container">
+      <div class="brand">
+        <a href="index.html">
+          <img src="Imagens/unnamed.webp" alt="Mãos Solidárias" class="logo" />
+        </a>
+        <h1 class="site-title">ONG Mãos Solidárias</h1>
+      </div>
 
-      <nav>
+      <input id="nav-toggle" class="nav-toggle" type="checkbox" />
+      <label for="nav-toggle" class="nav-toggle-label" aria-hidden>☰</label>
+
+      <nav class="nav" aria-label="Main navigation">
         <ul>
           <li><a href="index.html">Início</a></li>
           <li><a href="projetos.html">Projetos e Doações</a></li>
-          <li><a href="cadastro.html">Seja um Voluntário</a></li>
+          <li class="has-submenu">
+            <a href="#" aria-haspopup="true" aria-expanded="false"
+              >Serviços ▾</a
+            >
+            <ul class="submenu" aria-label="submenu">
+              <li><a href="projetos.html#cozinha">Cozinha Solidária</a></li>
+              <li><a href="projetos.html#saber">Saber para Crescer</a></li>
+            </ul>
+          </li>
+          <li><a href="Cadastro.html">Seja um Voluntário</a></li>
         </ul>
       </nav>
-      <br />
     </header>
 
-    <main>
-      <section>
-        <h2>Transformando Realidades Dia Após Dia</h2>
+    <main class="container">
+      <section aria-labelledby="home-hero">
+        <h2 id="home-hero">Bem-vindo à Mãos Solidárias</h2>
         <p>
-          Na ONG Mãos Solidárias, acreditamos no poder da solidariedade para
-          transformar vidas e construir um futuro melhor para todos. Com uma
-          equipe dedicada de voluntários e parceiros, trabalhamos
-          incansavelmente para levar apoio, educação e esperança às comunidades
-          mais necessitadas.
+          Somos uma organização sem fins lucrativos dedicada a promover o
+          bem-estar e a dignidade de pessoas em situação de vulnerabilidade.
         </p>
-
         <img
           src="Imagens/atuação.png"
           alt="Voluntários da ONG sorrindo e trabalhando juntos em uma ação social."
@@ -46,52 +52,125 @@
       <section>
         <h2>Sobre a Organização</h2>
         <p>
-          Fundada em 2025, a Mãos Solidárias já impactou milhares de vidas
-          através de programas de educação, saúde e segurança alimentar. Nossa
-          dedicação e paixão por ajudar o próximo nos impulsionam a continuar
-          crescendo e alcançando novos horizontes.
+          Fundada em 2020, a ONG Mãos Solidárias é uma organização sem fins
+          lucrativos dedicada à transformação social através de ações concretas
+          e impactantes. Já impactamos mais de 15 mil vidas através de nossos
+          programas estratégicos de educação, saúde, segurança alimentar e
+          inclusão social.
+        </p>
+        <p>
+          Nossa atuação acontece principalmente em comunidades carentes nas
+          periferias urbanas, com foco especial em crianças, adolescentes,
+          idosos e pessoas em situação de rua. Trabalhamos com uma equipe
+          multidisciplinar composta por profissionais voluntários e remunerados,
+          garantindo a qualidade e continuidade de nossos projetos.
+        </p>
+        <p>
+          Somos certificados como OSCIP (Organização da Sociedade Civil de
+          Interesse Público) e registrados no Conselho Nacional de Assistência
+          Social (CNAS). Mantemos total transparência em nossas ações e
+          prestamos contas regularmente à comunidade e aos órgãos competentes.
         </p>
       </section>
 
       <section>
-        <h2>Nossa Missão e Valores</h2>
+        <h2>Números que Falam</h2>
+        <div class="stats">
+          <article>
+            <h3>15.000+</h3>
+            <p>Pessoas impactadas</p>
+          </article>
+          <article>
+            <h3>150+</h3>
+            <p>Voluntários ativos</p>
+          </article>
+          <article>
+            <h3>8</h3>
+            <p>Programas sociais</p>
+          </article>
+          <article>
+            <h3>4</h3>
+            <p>Anos de atuação</p>
+          </article>
+        </div>
+      </section>
 
+      <section>
+        <h2>Nossa Missão e Valores</h2>
         <article>
           <h3>Missão</h3>
           <p>
-            Nossa missão é combater a desigualdade e promover o desenvolvimento
-            humano.
+            Promover a transformação social de comunidades em vulnerabilidade
+            através de ações integradas de educação, saúde e desenvolvimento
+            humano, garantindo o exercício pleno de direitos e dignidade para
+            todas as pessoas.
           </p>
         </article>
-
         <article>
           <h3>Visão</h3>
           <p>
-            Ser uma organização de referência na transformação social em nossa
-            região.
+            Ser uma organização de referência em transformação social,
+            reconhecida pela qualidade, efetividade e impacto de seus projetos,
+            atuando como ponte entre a sociedade civil e as pessoas em situação
+            de vulnerabilidade.
           </p>
         </article>
-
         <article>
-          <h3>Valores</h3>
+          <h3>Valores Fundamentais</h3>
           <ul>
-            <li>Empatia</li>
-            <li>Transparência</li>
-            <li>Comprometimento</li>
+            <li>
+              <strong>Empatia:</strong> Compreendemos e respeitamos a dignidade
+              de cada pessoa
+            </li>
+            <li>
+              <strong>Transparência:</strong> Prestamos contas de nossos atos e
+              investimentos
+            </li>
+            <li>
+              <strong>Comprometimento:</strong> Dedicamos-nos integralmente à
+              nossa missão
+            </li>
+            <li>
+              <strong>Inclusão:</strong> Valorizamos e respeitamos a diversidade
+              e diferenças
+            </li>
+            <li>
+              <strong>Sustentabilidade:</strong> Buscamos soluções duradouras
+              para problemas sociais
+            </li>
           </ul>
         </article>
       </section>
+
+      <section>
+        <h2>Por Que Apoiar a Mãos Solidárias?</h2>
+        <p>
+          Quando você apoia nossa organização, você não está apenas doando
+          dinheiro ou tempo. Você está investindo em pessoas, em futuros mais
+          brilhantes, em comunidades transformadas. Cada ação sua gera um efeito
+          multiplicador incrível.
+        </p>
+        <ul>
+          <li>100% das doações são destinadas aos projetos sociais</li>
+          <li>Acompanhamento personalizado de cada beneficiário</li>
+          <li>
+            Parcerias com instituições públicas e privadas para maior impacto
+          </li>
+          <li>Relatórios trimestrais de resultados e impacto social</li>
+          <li>Comunidade de doadores e voluntários engajados</li>
+        </ul>
+      </section>
     </main>
-    <br />
-    <footer>
+
+    <footer class="container">
       <section>
         <h3>Contato</h3>
         <p>Endereço: Rua Fictícia, 123 - Bairro Unipê</p>
         <p>Telefone: (83) 0800 721 5844</p>
         <p>Email: contato@ongms.com.br</p>
       </section>
-
-      <p>&copy; 2025 [Mãos Solidárias]. Todos os direitos reservados.</p>
+      <p>&copy; 2025 Mãos Solidárias. Todos os direitos reservados.</p>
     </footer>
+    <script src="JS/scripts.js"></script>
   </body>
 </html>
